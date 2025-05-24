@@ -1,12 +1,18 @@
 package fileHandleing;
 
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
 
 public class FileHandling {
     public static void main(String[] args) throws IOException {
-        File f=new File("E:\\PSA\\src\\fileHandleing\\ashu.txt");
-        boolean delete = f.delete();
-        System.out.println(delete);
+        FileWriter fileWriter=new FileWriter("ashu.txt");
+        fileWriter.write("97");
+        fileWriter.write("ashutosh");
+        fileWriter.close();
+        FileReader fr=new FileReader("ashu.txt");
+        BufferedReader br=new BufferedReader(fr);
+        String s = br.readLine();
+        System.out.println(s);
+
+
     }
 }
