@@ -6,7 +6,4 @@ public class InvalidNo extends RuntimeException
         super(msg);
     }
 
-    public InvalidNo(String str) {
-        super(str);
-    }
 }
